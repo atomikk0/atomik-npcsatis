@@ -1,8 +1,10 @@
 # atomik-npcsatis
 
-client.lua içinden düzenleyebilirsiniz itemleri
+Kordinatları client.lua üzerinden değiştirebilirsiniz.
 
-Örnek item:
+İtemleri client.lua üzerinden değiştirebilirsiniz.
+
+Örnek item ekleme:
 
 ```lua
             {
@@ -18,4 +20,7 @@ client.lua içinden düzenleyebilirsiniz itemleri
             },
 ```
 
-Kordinatları client.lua üzerinden değiştirebilirsiniz.
+Gerekli Script:
+
+- [qb-menu](https://github.com/qbcore-framework/qb-menu)
+- [qb-input](https://github.com/qbcore-framework/qb-input)
