@@ -1,24 +1,9 @@
 # atomik-npcsatis
 
-Kordinatları client.lua üzerinden değiştirebilirsiniz.
+Config Yenilendi
 
-İtemleri client.lua üzerinden değiştirebilirsiniz.
-
-Örnek item ekleme:
-
-```lua
-            {
-                header = "Üzüm (30$)", -- menüde yazıcak ismi
-                txt = "", -- menüde yazıcak açıklama (boş olsa da olur)
-                params = {
-                    event = 'atomik-npcsatis:adetsor', -- event ellemeyin
-                    args = {
-                        itemName = "grape", -- item ismi
-                        price = 30 -- fiyat
-                    }
-                }
-            },
-```
+Discord: 
+https://discord.gg/GSeQ747HsC
 
 Gerekli Script:
 
