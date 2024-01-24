@@ -250,41 +250,6 @@ Config.Shops = {
         },
     },
     [4] = {
-        event = "atomik-npcsatis:illegaltoptanci",
-        header = "İllegal Toptancı",
-        items = {
-            [1] = {
-                label = "Elmas Yüzük (1000$)",
-                description = "",
-                itemName = "diamond_ring",
-                price = 1000,
-                event = "atomik-npcsatis:adetsor2",
-            },
-            [2] = {
-                label = "Elmas (1000$)",
-                description = "",
-                itemName = "diamond",
-                price = 1000,
-                event = "atomik-npcsatis:adetsor2",
-            },
-            [3] = {
-                label = "Altın Kolye (1000$)",
-                description = "",
-                itemName = "goldchain",
-                price = 1000,
-                event = "atomik-npcsatis:adetsor2",
-            },
-            [4] = {
-                label = "10K Altın Kolye (1000$)",
-                description = "",
-                itemName = "10kgoldchain",
-                price = 1000,
-                event = "atomik-npcsatis:adetsor2",
-            },
-
-        },
-    },
-    [5] = {
         event = "atomik-npcsatis:illegaltacir",
         header = "İllegal Tacir",
         items = {
