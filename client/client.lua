@@ -16,41 +16,59 @@ CreateThread(function()
 end)
 
 CreateThread(function()
-    for _,v in pairs(Config.Target) do
-        if v.usejob == true then
-            exports['qb-target']:AddCircleZone(v.label, vector3(v.coords.x, v.coords.y, v.coords.z), 0.4, { 
-                name = v.label, 
-                debugPoly = false,
-              }, {
-                options = {
-                    {
+    for _, v in pairs(Config.Target) do
+        local zones = {}
+
+        if v.usejob or v.usegang then
+            local sourceTable = (v.usejob and v.job) or (v.usegang and v.gangs)
+
+            if sourceTable and type(sourceTable) == "table" then
+                for _, data in pairs(sourceTable) do
+                    local zoneOptions = {
                         type = v.type,
                         event = v.event,
                         icon = v.icon,
                         label = v.text,
-                        job = v.job,
-                    },
-                },
-                distance = v.distance,
-            })
+                    }
+
+                    if v.usejob then
+                        zoneOptions.job = {
+                            [data.jobName] = data.minRank,
+                        }
+                    end
+
+                    if v.usegang then
+                        zoneOptions.gang = {
+                            [data.gangName] = data.minRank,
+                        }
+                    end
+
+                    table.insert(zones, zoneOptions)
+                end
+            end
         else
-            exports['qb-target']:AddCircleZone(v.label, vector3(v.coords.x, v.coords.y, v.coords.z), 0.4, { 
-                name = v.label, 
-                debugPoly = false,
-              }, {
-                options = {
-                    {
-                        type = v.type,
-                        event = v.event,
-                        icon = v.icon,
-                        label = v.text,
-                    },
-                },
-                distance = v.distance,
+            table.insert(zones, {
+                type = v.type,
+                event = v.event,
+                icon = v.icon,
+                label = v.text,
             })
         end
+
+        exports['qb-target']:AddCircleZone(v.label, v.coords, 0.4, {
+            name = v.label,
+            debugPoly = false,
+        }, {
+            options = zones,
+            distance = v.distance,
+        })
     end
 end)
+
+
+
+
+
 
 Citizen.CreateThread(function()
     for _,v in pairs(Config.Peds) do
