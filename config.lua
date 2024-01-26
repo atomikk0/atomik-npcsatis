@@ -21,8 +21,28 @@ Config.Target = {
         icon = "fas fa-circle",
         label = "Toptanci",
         distance = 4.0,
+        usegang = false,
+        gangs = {
+            [1] = {
+                gangName = "ballas",
+                minRank = 0,
+            },
+            [2] = {
+                gangName = "vagos",
+                minRank = 0,
+            },
+        },
         usejob = false,
-        job = "unemployed",
+        job = {
+            [1] = {
+                jobName = "police",
+                minRank = 0,
+            },
+            [2] = {
+                jobName = "ambulance",
+                minRank = 2,
+            },
+        },
         text = "Toptancı"
     },
     [2] = {
@@ -32,8 +52,28 @@ Config.Target = {
         icon = "fas fa-circle",
         label = "illegalTacir",
         distance = 2.5,
+        usegang = false,
+        gangs = {
+            [1] = {
+                gangName = "ballas",
+                minRank = 0,
+            },
+            [2] = {
+                gangName = "vagos",
+                minRank = 0,
+            },
+        },
         usejob = false,
-        job = "unemployed",
+        job = {
+            [1] = {
+                jobName = "police",
+                minRank = 0,
+            },
+            [2] = {
+                jobName = "ambulance",
+                minRank = 2,
+            },
+        },
         text = "İllegal Tacir"
     },
     [3] = {
@@ -43,8 +83,28 @@ Config.Target = {
         icon = "fas fa-circle",
         label = "Hirdavatci",
         distance = 4.0,
+        usegang = false,
+        gangs = {
+            [1] = {
+                gangName = "ballas",
+                minRank = 0,
+            },
+            [2] = {
+                gangName = "vagos",
+                minRank = 0,
+            },
+        },
         usejob = false,
-        job = "unemployed",
+        job = {
+            [1] = {
+                jobName = "police",
+                minRank = 0,
+            },
+            [2] = {
+                jobName = "ambulance",
+                minRank = 2,
+            },
+        },
         text = "Hırdavatçı"
     },
     [4] = {
@@ -54,8 +114,28 @@ Config.Target = {
         icon = "fas fa-circle",
         label = "illegalToptanci",
         distance = 4.0,
+        usegang = false,
+        gangs = {
+            [1] = {
+                gangName = "ballas",
+                minRank = 0,
+            },
+            [2] = {
+                gangName = "vagos",
+                minRank = 0,
+            },
+        },
         usejob = false,
-        job = "unemployed",
+        job = {
+            [1] = {
+                jobName = "police",
+                minRank = 0,
+            },
+            [2] = {
+                jobName = "ambulance",
+                minRank = 2,
+            },
+        },
         text = "İllegal Toptancı"
     },
 }
@@ -250,6 +330,41 @@ Config.Shops = {
         },
     },
     [4] = {
+        event = "atomik-npcsatis:illegaltoptanci",
+        header = "İllegal Toptancı",
+        items = {
+            [1] = {
+                label = "Elmas Yüzük (1000$)",
+                description = "",
+                itemName = "diamond_ring",
+                price = 1000,
+                event = "atomik-npcsatis:adetsor2",
+            },
+            [2] = {
+                label = "Elmas (1000$)",
+                description = "",
+                itemName = "diamond",
+                price = 1000,
+                event = "atomik-npcsatis:adetsor2",
+            },
+            [3] = {
+                label = "Altın Kolye (1000$)",
+                description = "",
+                itemName = "goldchain",
+                price = 1000,
+                event = "atomik-npcsatis:adetsor2",
+            },
+            [4] = {
+                label = "10K Altın Kolye (1000$)",
+                description = "",
+                itemName = "10kgoldchain",
+                price = 1000,
+                event = "atomik-npcsatis:adetsor2",
+            },
+
+        },
+    },
+    [5] = {
         event = "atomik-npcsatis:illegaltacir",
         header = "İllegal Tacir",
         items = {
